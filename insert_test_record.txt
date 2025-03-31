@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `routes`.`insert_test_record`()
+BEGIN
+    DECLARE counter INT DEFAULT 0;
+    WHILE counter < 1000000 DO
+        INSERT INTO carriers_1 (carrier_company) VALUES ('Carrier ');
+        SET counter = counter + 1;
+    END WHILE;
+END
